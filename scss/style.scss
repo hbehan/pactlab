@@ -204,10 +204,10 @@ h1, h2, h3, h4, h5,
 .ftco-cover {
   // background: lighten( $black, 10%);
   @extend .bg-image;
-  
+	background-image: url(../images/bg_1.jpg);
+    background-position: center center;
+	background-size: contain;
 
-  background-position: center center;
- 	
 	.ftco-heading {
 		font-size: 50px;
 		line-height: 1.2;
