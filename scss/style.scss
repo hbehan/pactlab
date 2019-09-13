@@ -11,8 +11,8 @@ html {
 body {
 	font-family: $font-family-sans-serif;
 	background: $white;
-	font-size: 16px;
-	line-height: 1.8;
+	font-size: 18px;
+	line-height: 1.5;
 	font-weight: 300;
 }
 a {
@@ -23,11 +23,26 @@ a {
 		color: $primary;
 	}
 }
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
+
+.hangingindent {
+	padding-left: 50px ;
+	text-indent: -50px ;
+}
+
+h1,
+.h1 {
 	line-height: 1.5;
-	color: $black;
-	font-weight: 300;
+	color: black;
+	font-weight: 900;
+	padding-top: 1em;
+}
+
+h2, h3, h4, h5,
+.h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	color: black;
+	font-weight: 900;
+	padding-top:1em;
 }
 
 .text-primary {
@@ -46,16 +61,18 @@ h1, h2, h3, h4, h5,
 		top: 0;
 		position: relative;
 	}
-	
+
+
 	.navbar-nav {
 		> .nav-item {
 			> .nav-link {
-				font-size: 16px;
+				font-size: 18px;
+				color: black;
 				padding-top: 30px;
 				padding-bottom: 30px;
-				padding-left: 20px;
+				padding-left: 10px;
 				padding-right: 20px;
-				color: darken($white, 6%);
+
 				&:hover {
 					color: $white;
 				}
@@ -383,7 +400,7 @@ textarea.form-control {
 	height: inherit!important;
 }
 .ftco-vh-100 {
-  height: 100vh;
+  height: 140vh;
   @include media-breakpoint-down(lg) {
   	height: inherit;
   	padding-top: 5em;
@@ -483,7 +500,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-	padding: 7em 0;
+	padding: 0 0;
 }
 
 .ftco-bg-dark {
@@ -492,9 +509,9 @@ textarea.form-control {
 
 .ftco-footer {
 	font-size: 16px;
-	background: $white;
+	background: aliceblue;
 	border-top: 1px solid #eeeeee;
-	padding: 8em 0;
+	padding: 3em 0;
 	.ftco-footer-logo {
 		text-transform: uppercase;
 		letter-spacing: .1em;
@@ -833,8 +850,8 @@ textarea.form-control {
 
 	-ms-transform: perspective(1000px);
 	-moz-transform: perspective(1000px);
-	-moz-transform-style: preserve-3d; 
-	-ms-transform-style: preserve-3d; 
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
 
 
 	&:hover .back, &.hover .back {
@@ -850,7 +867,7 @@ textarea.form-control {
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 	}
-	
+
 
 	&, .front, .back {
 		width: 100%;
@@ -909,24 +926,40 @@ textarea.form-control {
 	.front {
 		-webkit-transform: rotateY(0deg);
 		-ms-transform: rotateY(0deg);
-		background: lightgreen;
 		z-index: 2;
 
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
+
 		&:before {
 			content: '';
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
-	    background: -moz-linear-gradient(top, transparent 0%, transparent 18%, rgba(0,0,0,0.8) 99%, rgba(0,0,0,0.8) 100%);
-	    background: -webkit-linear-gradient(top, transparent 0%, transparent 18%, rgba(0,0,0,0.8) 99%, rgba(0,0,0,0.8) 100%);
-	    background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0,0,0,0.8) 99%, rgba(0,0,0,0.8) 100%);
-	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: -moz-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+			background: -webkit-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+			background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 		}
+
+		.logo1
+		{	background:
+
+	url(https://mindtrails.virginia.edu/img/logo.png) 0 0 no-repeat;
+	}
+
+		.logo2
+		{	background:
+
+						url(https://mindtrails.virginia.edu/img/logo.png) 0 0 no-repeat;
+		}
+
+
+
+
 		.box {
 			position: absolute;
 			bottom: 0;
@@ -960,14 +993,14 @@ textarea.form-control {
 	    transform: rotateY(-180deg);
 	}
 
-	
+
 	.back p {
 		position: absolute;
-		top: 40px;
-		left: 0;
-		right: 0;
-		text-align: center;
-		padding: 0 20px;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		text-align: justify;
+		padding: 20px 20px 20px 20px;
 		font-size: 18px;
 	}
 	.author {
@@ -1007,7 +1040,7 @@ textarea.form-control {
 	}
 
 }
-		
+
 // magnific pop up
 
 .image-popup {
@@ -1019,9 +1052,9 @@ textarea.form-control {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s ease-out; 
-  -moz-transition: all 0.3s ease-out; 
-  -o-transition: all 0.3s ease-out; 
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -1032,7 +1065,7 @@ textarea.form-control {
     opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
@@ -1052,7 +1085,7 @@ textarea.form-control {
 	}
 }
 
-// blocks 
+// blocks
 .block-5 {
 	overflow: hidden;
 	background-size: cover;
@@ -1087,7 +1120,7 @@ textarea.form-control {
 			left: 0;
 			right: 0;
 			z-index: 1;
-			background: $white;	
+			background: $white;
 			visibility: hidden;
 			opacity: 0;
 			height: 0;
@@ -1144,7 +1177,7 @@ textarea.form-control {
 			.heading, .subheading, .post-meta {
 				color: $black;
 			}
-			
+
 		}
 	}
 }
@@ -1180,9 +1213,9 @@ textarea.form-control {
 			font-size: 16px;
 		}
 	}
-} 
+}
 
-//### .block-10 
+//### .block-10
 .block-10 {
 	margin-bottom: 30px;
 	.person-info {
@@ -1229,7 +1262,7 @@ textarea.form-control {
 		display: block;
 		sup {
 			font-size: 20px;
-			top: -2em; 
+			top: -2em;
 		}
 		.number {
 			font-size: 80px;
@@ -1295,14 +1328,14 @@ textarea.form-control {
 				&[aria-expanded="false"] {
 					&:before {
 						content: "\e313";
-						color: #ccc;	
+						color: #ccc;
 						font-family: 'icomoon';
 						position: absolute;
-				
+
 						transition: .3s all ease;
 					}
 				}
-				
+
 			}
 		}
 		.body-text {
@@ -1320,7 +1353,7 @@ textarea.form-control {
 			padding-bottom: 2em;
 		}
 		.owl-item {
-			box-shadow: 0 7px 20px -5px rgba(0,0,0,.2);	
+			box-shadow: 0 7px 20px -5px rgba(0,0,0,.2);
 		}
 		.owl-nav {
 			z-index: 2;
@@ -1364,7 +1397,7 @@ textarea.form-control {
 				margin-bottom: 10px;
 				transition: .3s all ease;
 				&.active {
-					
+
 					background: $primary;
 				}
 			}
@@ -1402,7 +1435,7 @@ textarea.form-control {
 		padding: 10% 7%;
 		@include media-breakpoint-up(md) {
 			width: 50%;
-			padding: 10% 7%;	
+			padding: 10% 7%;
 		}
 	}
 	.text {
@@ -1471,7 +1504,7 @@ textarea.form-control {
 				&:hover, &:focus {
 					color: $white;
 				}
-			}	
+			}
 		}
 	}
 	.prev {
@@ -1599,9 +1632,9 @@ textarea.form-control {
 	padding: 25px;
 	font-size: 15px;
 	width: 100%;
-	
+
 	float: left;
-	
+
 	background: $white;
 	*:last-child {
 		margin-bottom: 0;
@@ -1654,7 +1687,7 @@ textarea.form-control {
 	background-color: rgba(255,255,255,0.9);
 	box-shadow: 0px 24px 64px rgba(0,0,0,0.24);
 	border-radius:16px;
-	opacity: 0; 
+	opacity: 0;
 	visibility: hidden;
 	transition: opacity .2s ease-out, visibility 0s linear .2s;
 	z-index:1000;
